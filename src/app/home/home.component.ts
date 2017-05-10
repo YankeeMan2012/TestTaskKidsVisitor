@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from "../shared/http.service";
-import {IEventCard} from "../shared/interfaces";
+import {HttpService} from '../shared/http.service';
+import {IEventCard} from '../shared/interfaces';
 
 @Component({
     selector: 'app-home',
@@ -10,6 +10,7 @@ import {IEventCard} from "../shared/interfaces";
 export class HomeComponent implements OnInit {
 
     private events: IEventCard[];
+    private site = 'https://kidsvisitor.com/';
 
     constructor(private httpService: HttpService) {
     }
@@ -18,9 +19,7 @@ export class HomeComponent implements OnInit {
         this.httpService.getEventCards(`?locality=Kharkov&limit=10`).subscribe(
             data => {
                 this.events = data;
-                console.log(this.events);
             }
         );
     }
-
 }

@@ -8,7 +8,7 @@ import {AppComponent} from './app.component';
 
 import {HttpService} from './shared/http.service';
 import {EventComponent} from './event/event.component';
-import {HomeComponent} from "./home/home.component";
+import {HomeComponent} from './home/home.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
